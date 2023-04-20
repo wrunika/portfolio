@@ -1,0 +1,25 @@
+.footerBlock {
+    padding: 50px 0;
+    background-color: #efd491;
+}
+
+.footerContainer {
+    gap: 15px;
+}
+
+.socialIcons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid crimson;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background-color: blueviolet;
+}
+
+.title {
+    border: 2px solid blueviolet;
+}

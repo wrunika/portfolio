@@ -1,0 +1,22 @@
+.projectsBlock {
+    padding: 50px 0;
+    background-color: #d1b2ee;
+}
+
+.projectsContainer {
+    gap: 15px;
+}
+
+.title {
+    border: 2px solid crimson;
+    background-color: lightgrey;
+}
+
+.projects {
+    border: 2px solid darkslateblue;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}

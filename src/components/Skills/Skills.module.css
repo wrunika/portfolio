@@ -1,0 +1,22 @@
+.skillsBlock {
+    padding: 50px 0;
+    background-color: #40c095;
+}
+
+.skillsContainer {
+    gap: 15px;
+}
+
+.title {
+    border: 2px solid crimson;
+    background-color: lightgrey;
+}
+
+.skills {
+    border: 2px solid darkslateblue;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
