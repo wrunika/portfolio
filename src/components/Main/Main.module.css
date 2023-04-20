@@ -3,7 +3,7 @@
     background-color: #B8E7E8FF;
 }
 
-.mainContainer {
+.mainBlock .mainContainer {
     flex-direction: row;
 }
 
