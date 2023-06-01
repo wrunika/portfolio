@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Main.module.css';
 import styleContainer from './../../common/styles/Container.module.css';
 import myPhoto from './../../assets/images/my-photo.jpg';
+import {TypedComponent} from "./TypedComponent/TypedComponent";
 
 export const Main = () => {
     return (
@@ -10,7 +11,7 @@ export const Main = () => {
                 <div className={s.mainText}>
                     <span>Hi there, My name is</span>
                     <h1>Veranika Vitukevich</h1>
-                    <p className={s.profession}>Frontend <span className={s.accentSpan}>developer</span></p>
+                    <TypedComponent />
                 </div>
                 <div className={s.mainPhoto}><img src={myPhoto} alt={'this is Me'}/></div>
             </div>
