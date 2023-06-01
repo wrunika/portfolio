@@ -1,22 +1,23 @@
 .skillsBlock {
-    padding: 50px 0;
-    background-color: #40c095;
+    padding: 3.12rem 0;
+    background-color: #fff;
 }
 
 .skillsContainer {
-    gap: 15px;
-}
-
-.title {
-    border: 2px solid crimson;
-    background-color: lightgrey;
+    /*gap: 15px;*/
 }
 
 .skills {
-    border: 2px solid darkslateblue;
+    /*border: 2px solid darkslateblue;*/
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 1.5rem;
+}
+
+@media screen and (max-width: 666px) {
+    .skills {
+        justify-content: center;
+    }
 }
