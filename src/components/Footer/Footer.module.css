@@ -1,25 +1,40 @@
 .footerBlock {
-    padding: 50px 0;
-    background-color: #efd491;
+    padding: 10px 0;
+    background-color: #f7f7ff;
+    border-top: 1px solid rgba(11,11,19,.1);
 }
 
 .footerContainer {
-    gap: 15px;
+    flex-direction: row;
+    width: 90%;
+    font-size: 0.875rem;
+}
+
+.footerContainer span {
+    color: #ff9301;
 }
 
 .socialIcons {
-    width: 50%;
+    min-width: 15%;
     display: flex;
     justify-content: space-between;
-    border: 2px solid crimson;
 }
 
 .icon {
-    width: 60px;
-    height: 60px;
-    background-color: blueviolet;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 6px;
 }
 
-.title {
-    border: 2px solid blueviolet;
+.icon img {
+    width: 1.7rem;
+}
+
+@media screen and (max-width: 755px) {
+    .footerInfo {
+        display: none;
+    }
+    .footerContainer {
+        justify-content: right;
+    }
 }
