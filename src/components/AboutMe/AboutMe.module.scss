@@ -1,0 +1,49 @@
+.aboutBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.12rem 0;
+    background-color: #f7f7ff;
+    position: relative;
+    z-index: 0;
+    .aboutContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        @media screen and (max-width: 989px) {
+            justify-content: center;
+        }
+        .aboutPhoto img {
+            max-height: 23rem;
+            border-radius: 50%;
+            border: 7px solid #ff9301;
+            @media screen and (max-width: 1199px) {
+                height: 20rem;
+            }
+        }
+        .aboutInfo {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+            line-height: 1.7;
+            @media screen and (max-width: 989px) {
+                width: 80%;
+            }
+            .personalInfo {
+                display: flex;
+                justify-content: space-between;
+                line-height: 1.7;
+                gap: 1rem;
+                .infoTitle {
+                    font-weight: 500;
+                    padding-right: 10px;
+                }
+                .language {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
