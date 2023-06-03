@@ -1,23 +1,16 @@
+@import './../../common/styles/sass/variables';
+
 .skillsBlock {
     padding: 3.12rem 0;
-    background-color: #fff;
-}
-
-.skillsContainer {
-    /*gap: 15px;*/
-}
-
-.skills {
-    /*border: 2px solid darkslateblue;*/
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-@media screen and (max-width: 666px) {
+    background-color: $bgColor;
     .skills {
-        justify-content: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        @media screen and (max-width: 666px) {
+            justify-content: center;
+        }
     }
 }

@@ -1,9 +1,11 @@
+@import './../../common/styles/sass/variables';
+
 .aboutBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 3.12rem 0;
-    background-color: #f7f7ff;
+    background-color: $bgSecondColor;
     position: relative;
     z-index: 0;
     .aboutContainer {
@@ -16,7 +18,7 @@
         .aboutPhoto img {
             max-height: 23rem;
             border-radius: 50%;
-            border: 7px solid #ff9301;
+            border: 7px solid $primaryColor;
             @media screen and (max-width: 1199px) {
                 height: 20rem;
             }
@@ -28,6 +30,7 @@
             justify-content: space-between;
             gap: 2rem;
             line-height: 1.7;
+            color: $textColor;
             @media screen and (max-width: 989px) {
                 width: 80%;
             }

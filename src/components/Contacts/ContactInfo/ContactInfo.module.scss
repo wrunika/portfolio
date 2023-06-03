@@ -1,3 +1,5 @@
+@import './../../../common/styles/sass/variables';
+
 .contactWrapper {
     display: flex;
     gap: 1.5rem;
@@ -5,21 +7,16 @@
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.3;
-    color: #0b0b13;
-}
-
-.contactWrapper a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.contactWrapper a:hover {
-    color: #ff9301;
-    transition: .3s;
-}
-
-@media screen and (max-width: 550px) {
-    .contactWrapper {
+    color: $titleColor;
+    @media screen and (max-width: 550px) {
         font-size: 1rem;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color: $primaryColor;
+            transition: .3s;
+        }
     }
 }

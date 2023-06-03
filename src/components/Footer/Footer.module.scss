@@ -1,40 +1,36 @@
+@import './../../common/styles/sass/variables';
+
 .footerBlock {
     padding: 10px 0;
     background-color: #f7f7ff;
     border-top: 1px solid rgba(11,11,19,.1);
-}
-
-.footerContainer {
-    flex-direction: row;
-    width: 90%;
-    font-size: 0.875rem;
-}
-
-.footerContainer span {
-    color: #ff9301;
-}
-
-.socialIcons {
-    min-width: 15%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 6px;
-}
-
-.icon img {
-    width: 1.7rem;
-}
-
-@media screen and (max-width: 755px) {
-    .footerInfo {
-        display: none;
-    }
     .footerContainer {
-        justify-content: right;
+        flex-direction: row;
+        width: 90%;
+        font-size: 0.875rem;
+        @media screen and (max-width: 755px) {
+            justify-content: right;
+        }
+        .socialIcons {
+            min-width: 15%;
+            display: flex;
+            justify-content: space-between;
+            .icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 6px;
+                img {
+                    width: 1.7rem;
+                }
+            }
+        }
+        .footerInfo {
+            @media screen and (max-width: 755px) {
+                display: none;
+            }
+            span {
+                color: #ff9301;
+            }
+        }
     }
 }

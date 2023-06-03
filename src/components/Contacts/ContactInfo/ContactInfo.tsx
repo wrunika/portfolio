@@ -1,5 +1,5 @@
-import React from "react";
-import s from './ContactInfo.module.css';
+import React from 'react';
+import s from './ContactInfo.module.scss';
 
 type PropsType = {
     src: string

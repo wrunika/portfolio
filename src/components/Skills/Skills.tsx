@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Skills.module.css';
+import s from './Skills.module.scss';
 import styleContainer from './../../common/styles/Container.module.css'
 import {Skill} from "./Skill/Skill";
 import {Title} from "../../common/components/Title/Title";
@@ -10,11 +10,6 @@ export const Skills = () => {
             <div className={`${styleContainer.container} ${s.skillsContainer}`}>
                 <Title title={'Skills'} />
                 <div className={s.skills}>
-                    {/*<Skill title={'HTML'} description={'some description some description some description some description some description'} />
-                    <Skill title={'CSS 5'} description={'some description'} />
-                    <Skill title={'JS'} description={'some description'} />
-                    <Skill title={'React'} description={'some description'} />
-                    <Skill title={'Redux'} description={'some description'} />*/}
                     <Skill title={'HTML'} />
                     <Skill title={'CSS 5'} />
                     <Skill title={'JS'} />

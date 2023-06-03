@@ -1,18 +1,17 @@
+@import './../../../common/styles/sass/variables';
+
 .skill {
     padding: 10px 0;
     width: 15.625rem;
     display: flex;
     justify-content: space-around;
-    /*flex-direction: column;*/
     align-items: center;
     text-align: center;
-    /*border: 2px solid crimson;*/
-    background-color: #f7f7ff;
+    background-color: $bgSecondColor;
     border-radius: 10px;
-}
-
-.icon {
-    width: 3.75rem;
-    height: 3.75rem;
-    background-color: #fff;
+    .icon {
+        width: 3.75rem;
+        height: 3.75rem;
+        background-color: $bgColor;
+    }
 }

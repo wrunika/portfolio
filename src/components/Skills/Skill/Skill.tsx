@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Skill.module.css'
+import s from './Skill.module.scss'
 
 type PropsType = {
     title: string
@@ -10,7 +10,6 @@ export const Skill: React.FC<PropsType> = ({title, description}) => {
         <div className={s.skill}>
             <div className={s.icon}></div>
             <h4 className={s.title}>{title}</h4>
-            {/*<span className={s.description}>{description}</span>*/}
         </div>
     );
 };

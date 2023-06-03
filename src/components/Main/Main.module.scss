@@ -1,121 +1,96 @@
+@import './../../common/styles/sass/variables';
+
 .mainBlock {
     height: 100vh;
-    background-color: #fff;
+    background-color: $bgColor;
     padding: 3.12rem 0;
-}
-
-.mainBlock .mainContainer {
-    width: 100%;
-    flex-direction: row;
-    overflow: hidden;
-    justify-content: space-around;
-}
-
-.mainText {
-    position: relative;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 28.75rem;
-    line-height: 1.7;
-    color: #555;
-    z-index: 1;
-}
-
-.mainText span {
-    font-size: 1.5rem;
-    font-weight: 400;
-    margin: 0 0 20px;
-}
-
-.mainText h1 {
-    font-size: 5rem;
-    font-weight: 700;
-    line-height: 1;
-    margin: 0 0 3rem;
-    color: #0b0b13;
-}
-
-
-.mainText h1::before {
-    animation: slide-both-side 4s infinite both;
-    background: rgba(255,147,1,.5);
-    border-radius: 50%;
-    content: "";
-    height: 7rem;
-    left: -1rem;
-    position: absolute;
-    top: -0.5rem;
-    width: 7rem;
-    z-index: -1;
-}
-@keyframes slide-both-side {
-    50% {
-        top: 10%;
-    }
-}
-
-.profession {
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.mainPhoto img {
-    height: 50rem;
-    border-radius: 10px;
-}
-
-@media screen and (max-width: 1199px) {
-    .mainText h1 {
-        font-size: 4.5rem;
-    }
-    .mainPhoto img {
-        height: 40rem;
-    }
-}
-
-@media screen and (max-width: 1019px) {
-    .mainText h1 {
-        font-size: 4rem;
-    }
-    .mainPhoto img {
-        height: 35rem;
-    }
-}
-
-@media screen and (max-width: 959px) {
-    .mainText h1 {
-        font-size: 3rem;
-    }
-    .mainPhoto img {
-        height: 30rem;
-    }
-    .mainText h1::before {
-        height: 5rem;
-        width: 5rem;
-    }
-}
-
-@media screen and (max-width: 899px) {
-    .mainBlock {
+    @media screen and (max-width: 899px) {
         padding: 3.12rem 5px;
     }
-    .mainText {
-        padding: 20px;
-    }
-    .mainText h1::before {
-        left: 1rem;
-        top: 0.3rem;
-    }
-}
-
-@media screen and (max-width: 829px) {
-    .mainText {
-        width: 80%;
-    }
-    .mainText span {
-        font-size: 1.3rem;
-    }
-    .mainText h1 {
-        font-size: 2.5rem;
+    .mainContainer {
+        width: 100%;
+        flex-direction: row;
+        overflow: hidden;
+        justify-content: space-around;
+        .mainText {
+            position: relative;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 28.75rem;
+            line-height: 1.7;
+            color: $textColor;
+            z-index: 1;
+            @media screen and (max-width: 899px) {
+                padding: 20px;
+            }
+            @media screen and (max-width: 829px) {
+                width: 80%;
+            }
+            span {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin: 0 0 20px;
+                @media screen and (max-width: 829px) {
+                    font-size: 1.3rem;
+                }
+            }
+            h1 {
+                font-size: 5rem;
+                font-weight: 700;
+                line-height: 1;
+                margin: 0 0 3rem;
+                color: $titleColor;
+                &::before {
+                    animation: slide-both-side 4s infinite both;
+                    background: $bgAccentColor;
+                    border-radius: 50%;
+                    content: "";
+                    height: 7rem;
+                    left: -1rem;
+                    position: absolute;
+                    top: -0.5rem;
+                    width: 7rem;
+                    z-index: -1;
+                    @keyframes slide-both-side {
+                        50% {
+                            top: 10%;
+                        }
+                    }
+                    @media screen and (max-width: 959px) {
+                        height: 5rem;
+                        width: 5rem;
+                    }
+                    @media screen and (max-width: 899px) {
+                        left: 1rem;
+                        top: 0.3rem;
+                    }
+                }
+                @media screen and (max-width: 1199px) {
+                    font-size: 4.5rem;
+                }
+                @media screen and (max-width: 1019px) {
+                    font-size: 4rem;
+                }
+                @media screen and (max-width: 959px) {
+                    font-size: 3rem;
+                }
+                @media screen and (max-width: 829px) {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+        .mainPhoto img {
+            height: 50rem;
+            border-radius: 10px;
+            @media screen and (max-width: 1199px) {
+                height: 40rem;
+            }
+            @media screen and (max-width: 1019px) {
+                height: 35rem;
+            }
+            @media screen and (max-width: 959px) {
+                height: 30rem;
+            }
+        }
     }
 }

@@ -1,3 +1,5 @@
+@import './../../styles/sass/variables';
+
 .title {
     position: relative;
     z-index: 1;
@@ -5,24 +7,23 @@
     font-weight: 600;
     line-height: 1.2;
     text-transform: capitalize;
-    color: #0b0b13;
+    color: $titleColor;
     margin-bottom: 3rem;
-}
-
-.title::before {
-    animation: slide-both-side 4s infinite both;
-    background: rgba(255,147,1,.5);
-    border-radius: 50%;
-    content: "";
-    height: 3rem;
-    left: -1rem;
-    position: absolute;
-    top: -0.5rem;
-    width: 3rem;
-    z-index: -1;
-}
-@keyframes slide-both-side {
-    50% {
-        top: 10%;
+    &::before {
+        animation: slide-both-side 4s infinite both;
+        background: $bgAccentColor;
+        border-radius: 50%;
+        content: "";
+        height: 3rem;
+        left: -1rem;
+        position: absolute;
+        top: -0.5rem;
+        width: 3rem;
+        z-index: -1;
+        @keyframes slide-both-side {
+            50% {
+                top: 10%;
+            }
+        }
     }
 }

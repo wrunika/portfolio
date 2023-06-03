@@ -1,8 +1,140 @@
+@import './../../common/styles/sass/variables';
+
 .navGeneral {
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 899px) {
+        flex-direction: row;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        @media screen and (max-width: 899px) {
+            flex-direction: row;
+        }
+        @media screen and (max-width: 540px) {
+            display: none;
+        }
+        a {
+            img {
+                height: 2rem;
+            }
+            .imgDescription {
+                color: $bgColor;
+                background: $titleColor;
+                border: 1px solid transparent;
+                padding: 5px;
+                border-radius: 7px;
+                position: absolute;
+                left: 75px;
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        width: 5rem;
+        height: 100%;
+        padding: 20px 0;
+        text-align: center;
+        border: 1px solid rgba(11,11,19,.1);
+    }
+    .main {
+        padding: 10px 0;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $bgColor;
+        background: $primaryColor;
+    }
 }
 
+
+.imgDescription.about {
+    display: none;
+    top: -1rem;
+}
+
+.imgDescription.projects {
+    display: none;
+    top: 9rem;
+}
+
+.imgDescription.skills {
+    display: none;
+    top: 4rem;
+}
+
+.imgDescription.contacts {
+    display: none;
+    top: 14rem;
+}
+
+a:hover .about {
+    display: block;
+}
+
+a:hover .projects {
+    display: block;
+}
+
+a:hover .skills {
+    display: block;
+}
+
+a:hover .contacts {
+    display: block;
+}
+
+
+.burgerMenu {
+    display: none;
+    position: relative;
+    z-index: 9;
+    height: 2.5rem;
+    border: 0;
+    padding: 0;
+    margin-left: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    @media screen and (max-width: 540px) {
+        display: block;
+    }
+    .burger {
+        position: relative;
+        display: block;
+        top: 2.375rem;
+        right: 1rem;
+        width: 50px;
+        height: 3px;
+        border: 0;
+        background-color: $primaryColor;
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0.7rem;
+            width: 50px;
+            height: 3px;
+            background-color: $primaryColor;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            bottom: 0.7rem;
+            width: 50px;
+            height: 3px;
+            background-color: $primaryColor;
+        }
+    }
+}
+
+
+
+/*.navGeneral {
+    display: flex;
+    flex-direction: column;
+}
 .nav {
     display: flex;
     flex-direction: column;
@@ -38,59 +170,10 @@
     border-radius: 7px;
     position: absolute;
     left: 75px;
-}
-
-.imgDescription.about {
-    display: none;
-    top: 3.75rem;
-}
-
-.imgDescription.projects {
-    display: none;
-    top: 13.85rem;
-}
-
-.imgDescription.skills {
-    display: none;
-    top: 9rem;
-}
-
-.imgDescription.contacts {
-    display: none;
-    top: 19rem;
-}
-
-a:hover .about {
-    display: block;
-}
-
-a:hover .projects {
-    display: block;
-}
-
-a:hover .skills {
-    display: block;
-}
-
-a:hover .contacts {
-    display: block;
-}
+}*/
 
 
-
-
-.burgerMenu {
-    display: none;
-    position: relative;
-    z-index: 9;
-    height: 2.5rem;
-    border: 0;
-    padding: 0;
-    margin-left: 1rem;
-    background-color: transparent;
-    cursor: pointer;
-}
-.burger {
+/*.burger {
     position: relative;
     display: block;
     top: 2.375rem;
@@ -99,9 +182,9 @@ a:hover .contacts {
     height: 3px;
     border: 0;
     background-color: #ff9301;
-}
+}*/
 
-.burger::before {
+/*.burger::before {
     position: absolute;
     content: "";
     display: block;
@@ -109,9 +192,9 @@ a:hover .contacts {
     width: 50px;
     height: 3px;
     background-color: #ff9301;
-}
+}*/
 
-.burger::after {
+/*.burger::after {
     position: absolute;
     content: "";
     display: block;
@@ -119,21 +202,22 @@ a:hover .contacts {
     width: 50px;
     height: 3px;
     background-color: #ff9301;
-}
+}*/
 
 
 
 
 
-@media screen and (max-width: 899px) {
+/*@media screen and (max-width: 899px) {
     .navGeneral {
         flex-direction: row;
     }
     .nav {
         flex-direction: row;
     }
-}
+}*/
 
+/*
 @media screen and (max-width: 540px) {
     .burgerMenu {
         display: block;
@@ -141,4 +225,4 @@ a:hover .contacts {
     .nav {
         display: none;
     }
-}
+}*/

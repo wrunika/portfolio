@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './AboutMe.module.scss';
-import styleContainer from "../../common/styles/Container.module.css";
+import styleContainer from '../../common/styles/Container.module.css';
 import aboutPhoto from '../../assets/images/IMG_1534_cut-photo.ru.jpg';
-import {Title} from "../../common/components/Title/Title";
+import {Title} from '../../common/components/Title/Title';
 
 export const AboutMe = () => {
     const firstInfoDiv: InfoBlockType[] = [
@@ -25,7 +25,7 @@ export const AboutMe = () => {
             <Title title={'About Me'} />
             <div className={`${styleContainer.container} ${s.aboutContainer}`}>
                 <div className={s.aboutPhoto}>
-                    <img src={aboutPhoto} alt="it's me"/>
+                    <img src={aboutPhoto} alt='this is me'/>
                 </div>
                 <div className={s.aboutInfo}>
                     <p>I'm a Front-end Developer. I'm from Minsk. I would like to code and create web elements for amazing people around the world. I like work with new people. New people, new Experiences.</p>

@@ -1,18 +1,16 @@
+@import './../../common/styles/sass/variables';
+
 .projectsBlock {
     padding: 3.12rem 0;
-    background-color: #f7f7ff;
-}
-
-.projects {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-@media screen and (max-width: 666px) {
+    background-color: $bgSecondColor;
     .projects {
-        justify-content: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        @media screen and (max-width: 666px) {
+            justify-content: center;
+        }
     }
 }

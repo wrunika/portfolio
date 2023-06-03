@@ -1,3 +1,5 @@
+@import './../../../common/styles/sass/variables';
+
 .project {
     position: relative;
     padding: 0 10px 10px 10px;
@@ -8,43 +10,37 @@
     justify-content: space-around;
     align-items: flex-start;
     text-align: center;
-    background-color: #fff;
+    background-color: $bgColor;
     border-radius: 10px;
     overflow: hidden;
+    color: $textColor;
+    cursor: pointer;
     transition: .5s ease-in-out;
-}
-
-.project::before {
-    content: "";
-    position: absolute;
-    background: #ff9301;
-    width: 12.5rem;
-    height: 12.5rem;
-    border-radius: 50%;
-    left: -3.75rem;
-    top: -5rem;
-}
-.project:hover {
-    background: #ff9301;
-}
-
-.project h3 {
-    font-weight: 500;
-    line-height: 1.2;
-    color: #0b0b13;
-}
-
-.iconContainer {
-    width: 3.75rem;
-    height: 3.75rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background-size: 3.75rem;
-}
-
-.iconContainer a {
-    text-decoration: none;
-    border: 1px solid white;
+    &::before {
+        content: "";
+        position: absolute;
+        background: $primaryColor;
+        width: 12.5rem;
+        height: 12.5rem;
+        border-radius: 50%;
+        left: -3.75rem;
+        top: -5rem;
+    }
+    &:hover {
+        background: $primaryColor;
+    }
+    h3 {
+        font-weight: 500;
+        line-height: 1.2;
+        color: $titleColor;
+    }
+    .iconContainer {
+        width: 3.75rem;
+        height: 3.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-size: 3.75rem;
+    }
 }
