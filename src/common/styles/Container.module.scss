@@ -7,17 +7,11 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-}
-
-@media screen and (max-width: 755px) {
-    .container {
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 899px) {
-    .container {
+    @media screen and (max-width: 899px) {
         position: relative;
         z-index: 0;
+    }
+    @media screen and (max-width: 755px) {
+        justify-content: center;
     }
 }
