@@ -1,14 +1,11 @@
 @import './../../common/styles/sass/variables';
+@import './../../common/styles/sass/mixins';
 
 .projectsBlock {
     padding: 3.12rem 0;
     background-color: $bgSecondColor;
     .projects {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        @include layoutSkillsProjects();
         @media screen and (max-width: 666px) {
             justify-content: center;
         }
