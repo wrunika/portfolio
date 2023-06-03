@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './AboutMe.module.scss';
-import styleContainer from '../../common/styles/Container.module.css';
+import styleContainer from '../../common/styles/Container.module.scss';
 import aboutPhoto from '../../assets/images/IMG_1534_cut-photo.ru.jpg';
 import {Title} from '../../common/components/Title/Title';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Footer.module.scss';
-import styleContainer from './../../common/styles/Container.module.css';
+import styleContainer from '../../common/styles/Container.module.scss';
 import github from '../../assets/images/github-fill.svg';
 import linkedin from '../../assets/images/linkedin-fill.svg';
 import telegram from '../../assets/images/telegram-fill.svg';

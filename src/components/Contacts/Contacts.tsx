@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Contacts.module.scss';
-import styleContainer from './../../common/styles/Container.module.css';
+import styleContainer from '../../common/styles/Container.module.scss';
 import {Title} from "../../common/components/Title/Title";
 import phoneImg from '../../assets/images/vertical-tablet.svg';
 import mapImg from '../../assets/images/map.svg';
