@@ -82,11 +82,11 @@
     position: relative;
     z-index: 9;
     height: 2.5rem;
+    width: 50px;
     border: 0;
     padding: 0;
-    margin-left: 1rem;
+    margin-right: 1rem;
     background-color: transparent;
-    cursor: pointer;
     @media screen and (max-width: 540px) {
         display: block;
     }
@@ -94,7 +94,7 @@
         position: relative;
         display: block;
         top: 2.375rem;
-        right: 1rem;
+        right: 0;
         width: 50px;
         height: 3px;
         border: 0;
