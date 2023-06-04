@@ -9,6 +9,9 @@
     text-align: center;
     background-color: $bgSecondColor;
     border-radius: 10px;
+    @media screen and (max-width: 540px) {
+        width: 8rem;
+    }
     .icon {
         width: 3.75rem;
         height: 3.75rem;
