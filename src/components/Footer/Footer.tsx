@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Footer.module.scss';
-import styleContainer from '../../common/styles/Container.module.scss';
 import github from '../../assets/images/github-fill.svg';
 import linkedin from '../../assets/images/linkedin-fill.svg';
 import telegram from '../../assets/images/telegram-fill.svg';
@@ -9,7 +8,7 @@ import discord from '../../assets/images/discord-fill.svg';
 export const Footer = () => {
     return (
         <div className={s.footerBlock}>
-            <div className={`${styleContainer.container} ${s.footerContainer}`}>
+            <div className={`${s.container} ${s.footerContainer}`}>
                 <div className={s.socialIcons}>
                     <div className={s.icon}>
                         <a href="https://github.com/wrunika"><img src={github} alt={'github'}/></a>

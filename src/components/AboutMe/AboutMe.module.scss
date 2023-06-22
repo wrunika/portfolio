@@ -1,4 +1,5 @@
 @import './../../common/styles/sass/variables';
+@import './../../common/styles/sass/mixins';
 
 .aboutBlock {
     display: flex;
@@ -8,6 +9,9 @@
     background-color: $bgSecondColor;
     position: relative;
     z-index: 0;
+    .container {
+        @include container();
+    }
     .aboutContainer {
         flex-direction: row;
         justify-content: space-between;

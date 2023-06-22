@@ -1,4 +1,5 @@
 @import './../../common/styles/sass/variables';
+@import './../../common/styles/sass/mixins';
 
 .mainBlock {
     height: 100vh;
@@ -6,6 +7,9 @@
     padding: 3.12rem 0;
     @media screen and (max-width: 899px) {
         padding: 3.12rem 5px;
+    }
+    .container {
+        @include container();
     }
     .mainContainer {
         width: 100%;
@@ -100,3 +104,17 @@
         }
     }
 }
+
+
+
+/*
+.mainPhoto {
+    max-height: 91%;
+    min-height: 65%;
+    min-width: 50%;
+    !*background-size: 100%;*!
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+}*/

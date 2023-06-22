@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './AboutMe.module.scss';
-import styleContainer from '../../common/styles/Container.module.scss';
 import aboutPhoto from '../../assets/images/IMG_1534_cut-photo.ru.jpg';
 import {Title} from '../../common/components/Title/Title';
 
@@ -23,7 +22,7 @@ export const AboutMe = () => {
     return (
         <div className={s.aboutBlock}>
             <Title title={'About Me'} />
-            <div className={`${styleContainer.container} ${s.aboutContainer}`}>
+            <div className={`${s.container} ${s.aboutContainer}`}>
                 <div className={s.aboutPhoto}>
                     <img src={aboutPhoto} alt='this is me'/>
                 </div>

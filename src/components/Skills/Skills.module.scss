@@ -4,10 +4,13 @@
 .skillsBlock {
     padding: 3.12rem 0;
     background-color: $bgColor;
-    .skills {
-        @include layoutSkillsProjects();
-        @media screen and (max-width: 666px) {
-            justify-content: center;
+    .container {
+        @include container();
+        .skills {
+            @include layoutSkillsProjects();
+            @media screen and (max-width: 666px) {
+                justify-content: center;
+            }
         }
     }
 }

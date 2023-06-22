@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Skills.module.scss';
-import styleContainer from '../../common/styles/Container.module.scss'
 import {Skill} from './Skill/Skill';
 import {Title} from '../../common/components/Title/Title';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -30,7 +29,7 @@ export const Skills = () => {
     ];
     return (
         <div className={s.skillsBlock}>
-            <div className={`${styleContainer.container} ${s.skillsContainer}`}>
+            <div className={s.container}>
                 <Title title={'Skills'} />
                 <div className={s.skills}>
                     {skillsInfo.map((s, index) => {

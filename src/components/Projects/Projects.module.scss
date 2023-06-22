@@ -4,10 +4,13 @@
 .projectsBlock {
     padding: 3.12rem 0;
     background-color: $bgSecondColor;
-    .projects {
-        @include layoutSkillsProjects();
-        @media screen and (max-width: 666px) {
-            justify-content: center;
+    .container {
+        @include container();
+        .projects {
+            @include layoutSkillsProjects();
+            @media screen and (max-width: 666px) {
+                justify-content: center;
+            }
         }
     }
 }
