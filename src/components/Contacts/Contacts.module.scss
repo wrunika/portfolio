@@ -50,6 +50,15 @@
                     line-height: 1.5;
                     padding: 0.375rem 0.75rem;
                     background-color: $bgSecondColor;
+                    &:-webkit-autofill {
+                      border: 1px solid rgba(11, 11, 19, .3);
+                      -webkit-text-fill-color: $textColor;
+                      -webkit-box-shadow: 0 0 0 1000px rgba(11, 11, 19, .3) inset;
+                      transition: background-color 5000s ease-in-out 0s;
+                      &:focus {
+                        border: 2px solid $bgSecondColor;
+                      }
+                    }
                 }
 
                 textarea {
