@@ -15,7 +15,6 @@
     overflow: hidden;
     color: $textColor;
     cursor: pointer;
-    transition: .5s ease-in-out;
     &::before {
         content: "";
         position: absolute;
@@ -25,14 +24,26 @@
         border-radius: 50%;
         left: -3.75rem;
         top: -5rem;
+        transition: .5s ease-in-out;
     }
     &:hover {
-        background: $primaryColor;
+        &::before {
+            width: 24rem;
+            height: 24rem;
+            transition: .5s ease-in-out;
+        }
+        /*background: $primaryColor;*/
     }
     h3 {
+        position: relative;
         font-weight: 500;
         line-height: 1.2;
         color: $titleColor;
+        z-index: 1;
+    }
+    .description {
+        position: relative;
+        z-index: 1;
     }
     .iconContainer {
         width: 3.75rem;
