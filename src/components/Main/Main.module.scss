@@ -84,22 +84,19 @@
             }
         }
         .mainPhoto img {
-            height: 50rem;
+            height: 82.5vh;
             border-radius: 10px;
             @media screen and (max-width: 1199px) {
-                height: 40rem;
+                height: 72.5vh;
             }
             @media screen and (max-width: 1019px) {
-                height: 35rem;
+                height: 63.5vh;
             }
-            @media screen and (max-width: 959px) {
-                height: 30rem;
-            }
-            @media screen and (max-width: 400px) {
-                height: 25rem;
+            @media screen and (max-width: 960px) {
+                height: 54.5vh;
             }
             @media screen and (max-width: 375px) {
-                height: 20rem;
+                height: 49vh;
             }
         }
     }
