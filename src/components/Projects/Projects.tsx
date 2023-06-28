@@ -18,7 +18,7 @@ export const Projects = () => {
         backgroundImage: `url(${countImg})`,
     };
     return (
-        <div className={s.projectsBlock}>
+        <div id={'projects'} className={s.projectsBlock}>
             <div className={s.container}>
                 <Title title={'Projects'} />
                 <div className={s.projects}>

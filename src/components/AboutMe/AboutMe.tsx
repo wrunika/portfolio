@@ -20,7 +20,7 @@ export const AboutMe = () => {
         {className: s.infoTitle, title: 'Remote work:', info: 'Available'},
     ];
     return (
-        <div className={s.aboutBlock}>
+        <div id={'aboutMe'} className={s.aboutBlock}>
             <Title title={'About Me'} />
             <div className={`${s.container} ${s.aboutContainer}`}>
                 <div className={s.aboutPhoto}>

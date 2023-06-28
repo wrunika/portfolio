@@ -2,7 +2,7 @@
 @import './../../common/styles/sass/mixins';
 
 .contactsBlock {
-    padding: 3.12rem 0;
+    padding: $sectionPadding;
     background-color: $bgColor;
     .container {
         @include container();

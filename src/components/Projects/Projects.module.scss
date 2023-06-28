@@ -2,7 +2,7 @@
 @import './../../common/styles/sass/mixins';
 
 .projectsBlock {
-    padding: 3.12rem 0;
+    padding: $sectionPadding;
     background-color: $bgSecondColor;
     .container {
         @include container();

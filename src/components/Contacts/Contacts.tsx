@@ -13,7 +13,7 @@ export const Contacts = () => {
         {src: phoneImg, alt: 'phone', href: 'tel:+375297897245', description: '+375-29-789-72-45'},
     ]
     return (
-        <div className={s.contactsBlock}>
+        <div id={'contacts'} className={s.contactsBlock}>
             <div className={s.container}>
                 <Title title={'Get in touch'}/>
                 <div className={s.contactsContainer}>

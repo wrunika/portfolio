@@ -36,18 +36,21 @@
                 display: none;
                 top: 14rem;
             }
-            &:hover .about {
-                display: block;
+            @media screen and (min-width: 900px) {
+                &:hover .about {
+                    display: block;
+                }
+                &:hover .skills {
+                    display: block;
+                }
+                &:hover .projects {
+                    display: block;
+                }
+                &:hover .contacts {
+                    display: block;
+                }
             }
-            &:hover .skills {
-                display: block;
-            }
-            &:hover .projects {
-                display: block;
-            }
-            &:hover .contacts {
-                display: block;
-            }
+
             .imgDescription {
                 color: $bgColor;
                 background: $titleColor;
@@ -57,6 +60,12 @@
                 position: absolute;
                 left: 75px;
             }
+            &:hover {
+                border: 2px solid $bgAccentColor;
+            }
+        }
+        .active {
+            border: 3px solid $primaryColor;
         }
     }
     a {
@@ -66,6 +75,7 @@
         padding: 20px 0;
         text-align: center;
         border: 1px solid rgba(11,11,19,.1);
+        cursor: pointer;
     }
     .main {
         padding: 10px 0;

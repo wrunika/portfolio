@@ -8,7 +8,7 @@ export const Main = () => {
         backgroundImage: `url(${myPhoto})`
     }*/
     return (
-        <div className={s.mainBlock}>
+        <div id={'/'} className={s.mainBlock}>
             <div className={`${s.container} ${s.mainContainer}`}>
                 <div className={s.mainText}>
                     <span>Hi there, My name is</span>

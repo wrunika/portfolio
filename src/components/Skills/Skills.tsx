@@ -28,7 +28,7 @@ export const Skills = () => {
         {title: 'Postman', icon: faBugSlash},
     ];
     return (
-        <div className={s.skillsBlock}>
+        <div id={'skills'} className={s.skillsBlock}>
             <div className={s.container}>
                 <Title title={'Skills'} />
                 <div className={s.skills}>
