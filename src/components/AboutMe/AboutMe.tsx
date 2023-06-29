@@ -2,6 +2,7 @@ import React from 'react';
 import s from './AboutMe.module.scss';
 import aboutPhoto from '../../assets/images/IMG_1534_cut-photo.ru.jpg';
 import {Title} from '../../common/components/Title/Title';
+import {AttentionSeeker} from "react-awesome-reveal";
 
 export const AboutMe = () => {
     const firstInfoDiv: InfoBlockType[] = [
@@ -21,27 +22,33 @@ export const AboutMe = () => {
     ];
     return (
         <div id={'aboutMe'} className={s.aboutBlock}>
-            <Title title={'About Me'} />
-            <div className={`${s.container} ${s.aboutContainer}`}>
-                <div className={s.aboutPhoto}>
-                    <img src={aboutPhoto} alt='this is me'/>
-                </div>
-                <div className={s.aboutInfo}>
-                    <p>I'm a Front-end Developer. I'm from Minsk. I would like to code and create web elements for amazing people around the world. I like work with new people. New people, new Experiences.</p>
-                    <div className={s.personalInfo}>
-                        <div>
-                            {firstInfoDiv.map((item, index) => {
-                                return <p key={index}><span className={item.className}>{item.title}</span>{item.info}</p>
-                            })}
-                        </div>
-                        <div>
-                            {secondInfoDiv.map((item, index) => {
-                                return <p key={index}><span className={item.className}>{item.title}</span>{item.info}</p>
-                            })}
+            <AttentionSeeker effect={'pulse'} triggerOnce={true}>
+                <Title title={'About Me'}/>
+                <div className={`${s.container} ${s.aboutContainer}`}>
+                    <div className={s.aboutPhoto}>
+                        <img src={aboutPhoto} alt='this is me'/>
+                    </div>
+                    <div className={s.aboutInfo}>
+                        <p>I'm a Front-end Developer. I'm from Minsk. I would like to code and create web elements for
+                            amazing people around the world. I like work with new people. New people, new
+                            Experiences.</p>
+                        <div className={s.personalInfo}>
+                            <div>
+                                {firstInfoDiv.map((item, index) => {
+                                    return <p key={index}><span
+                                        className={item.className}>{item.title}</span>{item.info}</p>
+                                })}
+                            </div>
+                            <div>
+                                {secondInfoDiv.map((item, index) => {
+                                    return <p key={index}><span
+                                        className={item.className}>{item.title}</span>{item.info}</p>
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </AttentionSeeker>
         </div>
     );
 };

@@ -26,9 +26,6 @@ export const Nav = () => {
                     </Link>
                 </div>
             </div>
-            <div className={s.burgerMenu}>
-                <span className={s.burger}></span>
-            </div>
         </>
     );
 };

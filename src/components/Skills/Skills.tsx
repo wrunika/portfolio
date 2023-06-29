@@ -2,14 +2,15 @@ import React from 'react';
 import s from './Skills.module.scss';
 import {Skill} from './Skill/Skill';
 import {Title} from '../../common/components/Title/Title';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact } from '@fortawesome/free-brands-svg-icons';
-import { faHtml5 } from '@fortawesome/free-brands-svg-icons';
-import { faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-import { faSquareJs } from '@fortawesome/free-brands-svg-icons';
-import { faGitAlt } from '@fortawesome/free-brands-svg-icons';
-import { faSass } from '@fortawesome/free-brands-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faReact} from '@fortawesome/free-brands-svg-icons';
+import {faHtml5} from '@fortawesome/free-brands-svg-icons';
+import {faCss3Alt} from '@fortawesome/free-brands-svg-icons';
+import {faSquareJs} from '@fortawesome/free-brands-svg-icons';
+import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
+import {faSass} from '@fortawesome/free-brands-svg-icons';
 import {faBugSlash, IconDefinition} from '@fortawesome/free-solid-svg-icons';
+import {AttentionSeeker} from "react-awesome-reveal";
 
 
 export const Skills = () => {
@@ -29,14 +30,16 @@ export const Skills = () => {
     ];
     return (
         <div id={'skills'} className={s.skillsBlock}>
-            <div className={s.container}>
-                <Title title={'Skills'} />
-                <div className={s.skills}>
-                    {skillsInfo.map((s, index) => {
-                        return <Skill key={index} title={s.title} iconComponent={<FontAwesomeIcon icon={s.icon} />} />
-                    })}
+            <AttentionSeeker effect={'pulse'} triggerOnce={true}>
+                <div className={s.container}>
+                    <Title title={'Skills'}/>
+                    <div className={s.skills}>
+                        {skillsInfo.map((s, index) => {
+                            return <Skill key={index} title={s.title} iconComponent={<FontAwesomeIcon icon={s.icon}/>}/>
+                        })}
+                    </div>
                 </div>
-            </div>
+            </AttentionSeeker>
         </div>
     );
 };

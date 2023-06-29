@@ -5,6 +5,7 @@ import {Title} from "../../common/components/Title/Title";
 import socialImg from "./../../assets/images/social.svg";
 import todoImg from "./../../assets/images/checklist.svg";
 import countImg from "./../../assets/images/count-plus.svg";
+import {AttentionSeeker} from "react-awesome-reveal";
 
 
 export const Projects = () => {
@@ -19,16 +20,17 @@ export const Projects = () => {
     };
     return (
         <div id={'projects'} className={s.projectsBlock}>
-            <div className={s.container}>
-                <Title title={'Projects'} />
-                <div className={s.projects}>
-                    <Project style={socialStyle} title={'Social network'} description={'some description'} />
-                    <Project style={todoStyle} title={'TODOLIST'} description={'some description'} />
-                    <Project style={counterStyle} title={'Counter'} description={'some description'} />
+            <AttentionSeeker effect={'pulse'} triggerOnce={true}>
+                <div className={s.container}>
+                    <Title title={'Projects'}/>
+                    <div className={s.projects}>
+                        <Project style={socialStyle} title={'Social network'} description={'some description'}/>
+                        <Project style={todoStyle} title={'TODOLIST'} description={'some description'}/>
+                        <Project style={counterStyle} title={'Counter'} description={'some description'}/>
+                    </div>
+
                 </div>
-
-            </div>
-
+            </AttentionSeeker>
         </div>
     );
 };

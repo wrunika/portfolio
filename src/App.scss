@@ -1,3 +1,5 @@
+@import './../src/common/styles/sass/variables';
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,6 +10,17 @@
 .App {
     padding-left: 5rem;
     font-size: 16px;
+    > div {
+        &:nth-child(n) {
+            background-color: $bgSecondColor;
+        }
+        &:nth-child(2n) {
+            background-color: $bgColor;
+        }
+        &:nth-child(1) {
+            background-color: $bgColor;
+        }
+    }
 }
 
 @media screen and (max-width: 899px) {

@@ -83,49 +83,9 @@
         font-weight: 700;
         color: $bgColor;
         background: $primaryColor;
-    }
-
-}
-
-.burgerMenu {
-    display: none;
-    position: relative;
-    z-index: 9;
-    height: 2.5rem;
-    width: 50px;
-    border: 0;
-    padding: 0;
-    margin-right: 1rem;
-    background-color: transparent;
-    @media screen and (max-width: 540px) {
-        display: block;
-    }
-    .burger {
-        position: relative;
-        display: block;
-        top: 2.375rem;
-        right: 0;
-        width: 50px;
-        height: 3px;
-        border: 0;
-        background-color: $primaryColor;
-        &::before {
-            position: absolute;
-            content: "";
-            display: block;
-            top: 0.7rem;
-            width: 50px;
-            height: 3px;
-            background-color: $primaryColor;
-        }
-        &::after {
-            position: absolute;
-            content: "";
-            display: block;
-            bottom: 0.7rem;
-            width: 50px;
-            height: 3px;
-            background-color: $primaryColor;
+        @media screen and (max-width: 540px) {
+            display: none;
         }
     }
+
 }
