@@ -1,0 +1,111 @@
+@import './../../common/styles/sass/variables';
+
+.burgerMenu {
+  display: none;
+  position: relative;
+  z-index: 9;
+  height: 2.5rem;
+  width: 50px;
+  border: 0;
+  padding: 0;
+  margin-right: 1rem;
+  background-color: transparent;
+  @media screen and (max-width: 540px) {
+    display: block;
+  }
+  .main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    padding: 11px 0;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: $primaryColor;
+    color: $bgColor;
+
+    @media screen and (max-width: 540px) {
+      display: inline-block;
+    }
+  }
+  .burger {
+    position: relative;
+    display: block;
+    top: 2.375rem;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    border: 0;
+    background-color: $primaryColor;
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 0.7rem;
+      width: 50px;
+      height: 3px;
+      background-color: $primaryColor;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      bottom: 0.7rem;
+      width: 50px;
+      height: 3px;
+      background-color: $primaryColor;
+    }
+  }
+  .btnX {
+    background-color: transparent;
+  }
+  .btnX.burger::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: 0.5s;
+  }
+  .btnX.burger::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: 0.5s;
+  }
+
+  .burgerItems {
+    position: fixed;
+    left: -5rem;
+    top: 5rem;
+    height: 100vh;
+    background-color: $bgColor;
+    display: flex;
+    flex-direction: column;
+    transition: .7s;
+    a {
+      text-decoration: none;
+      color: $textColor;
+      cursor: pointer;
+      width: 5rem;
+      height: 5rem;
+      padding: 20px 0;
+      text-align: center;
+      border: 1px solid rgba(11,11,19,.1);
+      img {
+        height: 2rem;
+      }
+    }
+    .active {
+      border: 3px solid $primaryColor;
+    }
+  }
+  .open {
+    left: 0;
+  }
+}
+
+
+/*
+
+<div style="z-index: 999; display: block; position: fixed; border-radius: 50%;
+width: 8px; height: 8px; pointer-events: none; background-color: rgb(255, 147, 1);
+transition: opacity 0.15s ease-in-out 0s, transform 0.25s ease-in-out 0s;
+transform: translate(-50%, -50%) scale(0.7); opacity: 1; top: 852px; left: 353px;"></div>*/
