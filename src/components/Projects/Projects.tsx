@@ -5,7 +5,7 @@ import {Title} from "../../common/components/Title/Title";
 import socialImg from "./../../assets/images/social.svg";
 import todoImg from "./../../assets/images/checklist.svg";
 import countImg from "./../../assets/images/count-plus.svg";
-import {AttentionSeeker} from "react-awesome-reveal";
+import {Slide} from "react-awesome-reveal";
 
 
 export const Projects = () => {
@@ -18,19 +18,36 @@ export const Projects = () => {
     const counterStyle = {
         backgroundImage: `url(${countImg})`,
     };
+    const projectsData: ProjectsDataType[] = [
+        {style: socialStyle, title: 'Social network', description: 'some description'},
+        {style: todoStyle, title: 'TODOLIST', description: 'some description'},
+        {style: counterStyle, title: 'Counter', description: 'some description'},
+    ]
     return (
         <div id={'projects'} className={s.projectsBlock}>
-            <AttentionSeeker effect={'pulse'} triggerOnce={true}>
+            {/*<AttentionSeeker effect={'pulse'} triggerOnce={true}>*/}
                 <div className={s.container}>
                     <Title title={'Projects'}/>
                     <div className={s.projects}>
-                        <Project style={socialStyle} title={'Social network'} description={'some description'}/>
-                        <Project style={todoStyle} title={'TODOLIST'} description={'some description'}/>
-                        <Project style={counterStyle} title={'Counter'} description={'some description'}/>
+                        {projectsData.map( (pr) => {
+                            return(
+                                <Slide direction={'left'}>
+                                    <Project style={pr.style} title={pr.title} description={pr.description}/>
+                                </Slide>
+                            )
+                        } )}
                     </div>
 
                 </div>
-            </AttentionSeeker>
+            {/*</AttentionSeeker>*/}
         </div>
     );
 };
+
+type ProjectsDataType = {
+    style: {
+        backgroundImage: string
+    }
+    title: string
+    description: string
+}

@@ -7,11 +7,7 @@
   align-items: flex-start;
   gap: 1rem;
   @media screen and (max-width: 624px) {
-    width: 70%;
     align-items: center;
-  }
-  @media screen and (max-width: 550px) {
-    width: 100%;
   }
 
   input, textarea {

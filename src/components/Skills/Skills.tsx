@@ -10,6 +10,7 @@ import {faSquareJs} from '@fortawesome/free-brands-svg-icons';
 import {faGitAlt} from '@fortawesome/free-brands-svg-icons';
 import {faSass} from '@fortawesome/free-brands-svg-icons';
 import {faBugSlash, IconDefinition} from '@fortawesome/free-solid-svg-icons';
+import {Slide} from "react-awesome-reveal";
 import {AttentionSeeker} from "react-awesome-reveal";
 
 
@@ -30,16 +31,18 @@ export const Skills = () => {
     ];
     return (
         <div id={'skills'} className={s.skillsBlock}>
-            <AttentionSeeker effect={'pulse'} triggerOnce={true}>
+            {/*<AttentionSeeker effect={'pulse'} triggerOnce={true}>*/}
                 <div className={s.container}>
                     <Title title={'Skills'}/>
                     <div className={s.skills}>
                         {skillsInfo.map((s, index) => {
-                            return <Skill key={index} title={s.title} iconComponent={<FontAwesomeIcon icon={s.icon}/>}/>
+                            return <Slide direction={'left'}>
+                                <Skill key={index} title={s.title} iconComponent={<FontAwesomeIcon icon={s.icon}/>}/>
+                            </Slide>
                         })}
                     </div>
                 </div>
-            </AttentionSeeker>
+            {/*</AttentionSeeker>*/}
         </div>
     );
 };
