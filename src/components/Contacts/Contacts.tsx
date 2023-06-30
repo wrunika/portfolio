@@ -6,6 +6,7 @@ import mapImg from '../../assets/images/map.svg';
 import emailImg from '../../assets/images/envelope-open.svg';
 import {ContactInfo} from "./ContactInfo/ContactInfo";
 import {AttentionSeeker} from "react-awesome-reveal";
+import ContactsForm from "./ContactsForm/ContactsForm";
 
 export const Contacts = () => {
     const contactInfo = [
@@ -32,12 +33,13 @@ export const Contacts = () => {
                                 )
                             })}
                         </div>
-                        <form action="" className={s.contactsForm}>
+                        <ContactsForm />
+                        {/*<form action="" className={s.contactsForm}>
                             <input placeholder={"Name*"} type="text"/>
                             <input placeholder={"Email*"} type="text"/>
                             <textarea placeholder={"Your Message*"} rows={8}></textarea>
                             <button type={"submit"} className={s.contactsButton}>Send message</button>
-                        </form>
+                        </form>*/}
                     </div>
                 </div>
             </AttentionSeeker>
