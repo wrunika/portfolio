@@ -40,8 +40,8 @@ export const Skills = () => {
                     <Title title={'Skills'}/>
                     <div className={s.skills}>
                         {skillsInfo.map((s, index) => {
-                            return <Slide direction={'left'}>
-                                <Skill key={index} title={s.title} iconComponent={ (typeof s.icon === 'string') ? s.icon :  <FontAwesomeIcon icon={s.icon}/>}/>
+                            return <Slide key={index} direction={'left'}>
+                                <Skill title={s.title} iconComponent={ (typeof s.icon === 'string') ? s.icon :  <FontAwesomeIcon icon={s.icon}/>}/>
                             </Slide>
                         })}
                     </div>

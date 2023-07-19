@@ -29,9 +29,9 @@ export const Projects = () => {
                 <div className={s.container}>
                     <Title title={'Projects'}/>
                     <div className={s.projects}>
-                        {projectsData.map( (pr) => {
+                        {projectsData.map( (pr, index) => {
                             return(
-                                <Slide direction={'left'}>
+                                <Slide key={index} direction={'left'}>
                                     <Project style={pr.style} title={pr.title} description={pr.description}/>
                                 </Slide>
                             )
