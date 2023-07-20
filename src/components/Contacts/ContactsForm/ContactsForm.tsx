@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './ContactsForm.module.scss';
 import { useForm, SubmitHandler } from 'react-hook-form';
+import axios from 'axios';
 
 
 type InputsType = {
@@ -16,7 +17,14 @@ const ContactsForm = () => {
         watch,
         formState: { errors },
     } = useForm<InputsType>()
-    const onSubmit: SubmitHandler<InputsType> = (data) => console.log(data)
+    const onSubmit: SubmitHandler<InputsType> = (data) => {
+        console.log(data)
+            //axios.post('http://localhost:3010/sendMessage', data)
+            axios.post('https://gmail-nodejs-rho.vercel.app/sendMessage', data)
+            .then(() => {
+                console.log('your message has been sent')
+            })
+    }
 
     return (
         <>
