@@ -14,8 +14,9 @@ const ContactsForm = () => {
     const {
         register,
         handleSubmit,
-        watch,
+        //watch,
         formState: { errors },
+        reset
     } = useForm<InputsType>()
     const onSubmit: SubmitHandler<InputsType> = (data) => {
         console.log(data)
@@ -23,15 +24,19 @@ const ContactsForm = () => {
             axios.post('https://gmail-nodejs-rho.vercel.app/sendMessage', data)
             .then(() => {
                 console.log('your message has been sent')
+                reset()
             })
     }
 
     return (
         <>
             <form onSubmit={handleSubmit(onSubmit)} className={s.contactsForm}>
-                <input placeholder={"Name*"} {...register('name')} type="text"/>
-                <input placeholder={"Email*"} {...register('email')} type="text"/>
-                <textarea placeholder={"Your Message*"} {...register('message')} rows={8}></textarea>
+                <input placeholder={"Name*"} {...register('name', {required: true})} type="text"/>
+                {errors.name && <div className={s.error}>The field is required</div>}
+                <input placeholder={"Email*"} {...register('email', {required: true, pattern: /^[^@]+@[^@]+\.[^@]+$/i})} type="text"/>
+                {errors.email && <div className={s.error}>The field is required and should be correct</div>}
+                <textarea placeholder={"Your Message*"} {...register('message', {required: true, maxLength: 300})} rows={8}></textarea>
+                {errors.message && <div className={s.error}>The field is required and should be shorter than 300 symbols</div>}
                 <button type={"submit"} className={s.contactsButton}>Send message</button>
             </form>
         </>
