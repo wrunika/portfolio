@@ -1,14 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.64fff9e7.css",
-    "main.js": "/portfolio/static/js/main.a0cb3c6e.js",
+    "main.css": "/portfolio/static/css/main.c8409349.css",
+    "main.js": "/portfolio/static/js/main.14d67336.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/IMG_1534_cut-photo.ru.jpg": "/portfolio/static/media/IMG_1534_cut-photo.ru.b262563877ebc5bc49e9.jpg",
     "static/media/my-photo.jpg": "/portfolio/static/media/my-photo.10fb46570bebc314cf45.jpg",
     "static/media/checklist.svg": "/portfolio/static/media/checklist.ee7d6e87f4759faa7e069c7920e32140.svg",
     "static/media/woman.svg": "/portfolio/static/media/woman.eb0492f9f68e067f6b6f652250452459.svg",
+    "static/media/redux-icon.svg": "/portfolio/static/media/redux-icon.0212214c83d38d0d90d277560ec30ad4.svg",
     "static/media/social.svg": "/portfolio/static/media/social.2420be93f33c578e4329041ded5a2cdc.svg",
     "static/media/map.svg": "/portfolio/static/media/map.cb3dc39afed231f6ca2348be80889c5c.svg",
+    "static/media/postman-icon.svg": "/portfolio/static/media/postman-icon.6925cce7334de28a1ed620e4f836cf31.svg",
     "static/media/linkedin-fill.svg": "/portfolio/static/media/linkedin-fill.6133a6728952752752f32a335ff029e7.svg",
     "static/media/count-plus.svg": "/portfolio/static/media/count-plus.ef3dd6b2ad6cb56765adc26a85492084.svg",
     "static/media/list.svg": "/portfolio/static/media/list.d706b5b3c924f93dd7314652099f9944.svg",
@@ -19,13 +21,16 @@
     "static/media/envelope.svg": "/portfolio/static/media/envelope.41790289b75470345873ef28d451b69c.svg",
     "index.html": "/portfolio/index.html",
     "static/media/computer.svg": "/portfolio/static/media/computer.614686b846429a402bfa6caa2bc58136.svg",
+    "static/media/typescript-icon.svg": "/portfolio/static/media/typescript-icon.b1912881080281592d0a839e67c2d8d7.svg",
     "static/media/vertical-tablet.svg": "/portfolio/static/media/vertical-tablet.662e6e065aa6744a5ccdf2eb4c9ccf9a.svg",
-    "main.64fff9e7.css.map": "/portfolio/static/css/main.64fff9e7.css.map",
-    "main.a0cb3c6e.js.map": "/portfolio/static/js/main.a0cb3c6e.js.map",
+    "static/media/api-icon.svg": "/portfolio/static/media/api-icon.dfa7afca97451dea786b1c8395dbf6ff.svg",
+    "static/media/axios-icon.svg": "/portfolio/static/media/axios-icon.9b4182eaab2e8e38fe0cdcea673368b9.svg",
+    "main.c8409349.css.map": "/portfolio/static/css/main.c8409349.css.map",
+    "main.14d67336.js.map": "/portfolio/static/js/main.14d67336.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.64fff9e7.css",
-    "static/js/main.a0cb3c6e.js"
+    "static/css/main.c8409349.css",
+    "static/js/main.14d67336.js"
   ]
 }
