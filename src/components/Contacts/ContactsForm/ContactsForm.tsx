@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from './ContactsForm.module.scss';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import axios from 'axios';
@@ -11,6 +11,9 @@ type InputsType = {
 }
 const ContactsForm = () => {
 
+    const [infoMessage, setInfoMessage] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(false);
+
     const {
         register,
         handleSubmit,
@@ -19,12 +22,18 @@ const ContactsForm = () => {
         reset
     } = useForm<InputsType>()
     const onSubmit: SubmitHandler<InputsType> = (data) => {
+        setIsDisabled(true);
         console.log(data)
             //axios.post('http://localhost:3010/sendMessage', data)
             axios.post('https://gmail-nodejs-rho.vercel.app/sendMessage', data)
             .then(() => {
                 console.log('your message has been sent')
-                reset()
+                reset();
+                setIsDisabled(false);
+                setInfoMessage(true);
+                setTimeout(() => {
+                    setInfoMessage(false);
+                }, 3000)
             })
     }
 
@@ -37,8 +46,12 @@ const ContactsForm = () => {
                 {errors.email && <div className={s.error}>The field is required and should be correct</div>}
                 <textarea placeholder={"Your Message*"} {...register('message', {required: true, maxLength: 300})} rows={8}></textarea>
                 {errors.message && <div className={s.error}>The field is required and should be shorter than 300 symbols</div>}
-                <button type={"submit"} className={s.contactsButton}>Send message</button>
+                <button disabled={isDisabled} type={"submit"} className={s.contactsButton + ' ' + (isDisabled ? s.disabledButton : '')}>Send message</button>
             </form>
+
+            {infoMessage && <div className={s.infoMessage}>
+                Thank You, Your message has been sent. I will definitely contact You.
+            </div>}
         </>
     );
 };

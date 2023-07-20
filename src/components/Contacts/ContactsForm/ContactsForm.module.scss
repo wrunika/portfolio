@@ -58,4 +58,20 @@
     color: red;
     font-weight: 300;
   }
+  .contactsButton.disabledButton {
+    background: $bgSecondColor;
+    color: $titleColor;
+    opacity: .5;
+  }
+}
+
+.infoMessage {
+  width: 300px;
+  height: 80px;
+  padding: 20px 15px;
+  background-color: white;
+  border: 2px solid $primaryColor;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 5px;
 }
