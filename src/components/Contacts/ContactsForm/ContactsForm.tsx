@@ -33,7 +33,7 @@ const ContactsForm = () => {
                 setInfoMessage(true);
                 setTimeout(() => {
                     setInfoMessage(false);
-                }, 3000)
+                }, 4500)
             })
     }
 
