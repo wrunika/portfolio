@@ -19,9 +19,9 @@ export const Projects = () => {
         backgroundImage: `url(${countImg})`,
     };
     const projectsData: ProjectsDataType[] = [
-        {style: socialStyle, title: 'Social network', description: 'some description'},
-        {style: todoStyle, title: 'TODOLIST', description: 'some description'},
-        {style: counterStyle, title: 'Counter', description: 'some description'},
+        {style: socialStyle, title: 'Social network', link: 'https://github.com/wrunika/samurai-way-social-network'},
+        {style: todoStyle, title: 'TODOLIST', link: ''},
+        {style: counterStyle, title: 'Counter', link: ''},
     ]
     return (
         <div id={'projects'} className={s.projectsBlock}>
@@ -32,7 +32,7 @@ export const Projects = () => {
                         {projectsData.map( (pr, index) => {
                             return(
                                 <Slide key={index} direction={'left'}>
-                                    <Project style={pr.style} title={pr.title} description={pr.description}/>
+                                    <Project style={pr.style} title={pr.title} link={pr.link}/>
                                 </Slide>
                             )
                         } )}
@@ -49,5 +49,5 @@ type ProjectsDataType = {
         backgroundImage: string
     }
     title: string
-    description: string
+    link: string
 }

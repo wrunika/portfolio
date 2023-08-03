@@ -43,6 +43,20 @@
     .description {
         position: relative;
         z-index: 1;
+        .projectLink {
+            text-decoration: none;
+            color: $textColor;
+            background-color: #fff;
+            border: 1px solid #0b0b13;
+            border-radius: 4px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            line-height: 42px;
+            padding: 0 25px;
+        }
     }
     .iconContainer {
         width: 3.75rem;
